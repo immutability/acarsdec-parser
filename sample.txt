@@ -1,0 +1,36 @@
+
+[#1 (F:131.725 L:-33 E:0) 20/04/2015 04:56:35 --------------------------------
+Aircraft reg: .D-ABCB Flight id: AB0000
+Mode: 2 Msg. label: Q0
+Block id: 9 Ack: !
+Msg. no: S95A
+Message :
+
+
+[#1 (F:131.525 L:-32 E:1) 20/04/2015 05:29:43 --------------------------------
+Aircraft reg: ..HHHHH Flight id: XA0000
+Mode: 2 Msg. label: _d
+Block id: 7 Ack: T
+Msg. no: M46A
+Message :
+
+
+[#1 (F:131.725 L:-30 E:0) 20/04/2015 06:13:05 --------------------------------
+Aircraft reg: .D-ABCD Flight id: AB1111
+Mode: K Msg. label: 5V
+Block id: 3 Ack: !
+Msg. no: S68A
+Message :
+
+
+[#1 (F:131.725 L:-25 E:0) 20/04/2015 06:16:39 --------------------------------
+Aircraft reg: .D-ABCD Flight id: AB1111
+Mode: K Msg. label: 3V
+Block id: 7 Ack: !
+Msg. no: M33A
+Message :
+sample,multiline
+message,body,...
+
+
+

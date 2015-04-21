@@ -29,8 +29,8 @@ process_message() {
 	echo "  $aircraftreg $flightid $msgno"
 
 #mysql -h <host> -P <port> -u <user> -p<password> <database> << EOF
-#insert into messages (reg,flight,mode,label,blockid,ack,msgno,message,msgstamp) 
-#values('$aircraftreg','$flightid','$mode','$label','$blockid','$ack','$msgno','$msg','$1');
+#insert into messages (reg,flight,mode,label,blockid,ack,msgno,message,msgstamp,msgfreq) 
+#values('$aircraftreg','$flightid','$mode','$label','$blockid','$ack','$msgno','$msg','$1','$2');
 #EOF
 }
 
@@ -39,7 +39,8 @@ do
 	if [[ $line == [#* ]]
 	then
 		msgstamp=$(echo "$line" | grep -oP "\) \K.*(?= \-\-)")
-		process_message "$msgstamp"
+		msgfreq=$(echo "$line" | grep -oP "\(F:\K[0-9\.]+(?= )")
+		process_message "$msgstamp" "$msgfreq"
 		echo " "
 	fi
 done < "${1:-/dev/stdin}"
